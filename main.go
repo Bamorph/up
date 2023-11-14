@@ -16,6 +16,6 @@ func main() {
 		Handler: http.FileServer(http.Dir(".")),
 	}
 
-	log.Printf("Serving files from directory %s on port %s\n", *directory, *port)
+	log.Printf("Serving files from current directory on port %s\n", *port)
 	log.Fatal(server.ListenAndServe())
 }
